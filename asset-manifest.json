@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.0141d8d4.css",
-    "main.js": "/static/js/main.fd7dbab4.js",
-    "static/js/453.831b5a6b.chunk.js": "/static/js/453.831b5a6b.chunk.js",
-    "index.html": "/index.html",
-    "main.0141d8d4.css.map": "/static/css/main.0141d8d4.css.map",
-    "main.fd7dbab4.js.map": "/static/js/main.fd7dbab4.js.map",
-    "453.831b5a6b.chunk.js.map": "/static/js/453.831b5a6b.chunk.js.map"
+    "main.css": "/nba-app-github-pages/static/css/main.0141d8d4.css",
+    "main.js": "/nba-app-github-pages/static/js/main.77e6fcf4.js",
+    "static/js/453.831b5a6b.chunk.js": "/nba-app-github-pages/static/js/453.831b5a6b.chunk.js",
+    "index.html": "/nba-app-github-pages/index.html",
+    "main.0141d8d4.css.map": "/nba-app-github-pages/static/css/main.0141d8d4.css.map",
+    "main.77e6fcf4.js.map": "/nba-app-github-pages/static/js/main.77e6fcf4.js.map",
+    "453.831b5a6b.chunk.js.map": "/nba-app-github-pages/static/js/453.831b5a6b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0141d8d4.css",
-    "static/js/main.fd7dbab4.js"
+    "static/js/main.77e6fcf4.js"
   ]
 }
