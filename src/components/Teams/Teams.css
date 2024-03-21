@@ -1,0 +1,5 @@
+.allTeams{
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem;
+    justify-content: center;
+}

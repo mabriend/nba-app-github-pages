@@ -1,0 +1,17 @@
+.Team {
+    margin: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    background-color: #2580e3;
+    border: 2px solid white;
+    color: white;
+}
+
+.Team img {
+    width: 5rem;
+}
+
+.Team:hover {
+    cursor: pointer;
+    background-color: #004fa3;
+}

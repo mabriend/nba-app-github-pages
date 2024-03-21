@@ -1,0 +1,41 @@
+.HomePage {
+    text-align: center;
+    background-color: #e5d5be;
+    height: 100vh;
+}
+
+.HomePage img {
+    width: 10rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+hr{
+    margin-bottom: 2rem;
+    width: 90%;
+    height: 2px;
+    background-color: white;
+    border: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.NavigationItem {
+    background-color: #2580e3;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.NavigationItem:hover{
+    cursor: pointer;
+    background-color: #004fa3;
+}

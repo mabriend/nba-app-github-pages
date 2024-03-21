@@ -1,0 +1,42 @@
+.Menu{
+    background-color: #2f2f2f;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Menu img {
+    width: 5rem;
+    object-fit: contain;
+    margin: 1rem;
+}
+
+.Menu ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-top: 0;
+    align-self: flex-end;
+}
+
+.Menu ul li {
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+.Menu ul li {
+    padding-right: 3rem;
+}
+
+.menu-li{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.menu-li:hover{
+    color: #e5d5be;
+    scale: 1.20;
+    transition: 0.5s ease;
+}
