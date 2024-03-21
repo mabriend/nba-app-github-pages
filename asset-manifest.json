@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/nba-app-github-pages/static/css/main.0141d8d4.css",
-    "main.js": "/nba-app-github-pages/static/js/main.cc5c70e5.js",
+    "main.css": "/nba-app-github-pages/static/css/main.e8c7c0d1.css",
+    "main.js": "/nba-app-github-pages/static/js/main.6c54e75f.js",
     "static/js/453.831b5a6b.chunk.js": "/nba-app-github-pages/static/js/453.831b5a6b.chunk.js",
     "index.html": "/nba-app-github-pages/index.html",
-    "main.0141d8d4.css.map": "/nba-app-github-pages/static/css/main.0141d8d4.css.map",
-    "main.cc5c70e5.js.map": "/nba-app-github-pages/static/js/main.cc5c70e5.js.map",
+    "main.e8c7c0d1.css.map": "/nba-app-github-pages/static/css/main.e8c7c0d1.css.map",
+    "main.6c54e75f.js.map": "/nba-app-github-pages/static/js/main.6c54e75f.js.map",
     "453.831b5a6b.chunk.js.map": "/nba-app-github-pages/static/js/453.831b5a6b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0141d8d4.css",
-    "static/js/main.cc5c70e5.js"
+    "static/css/main.e8c7c0d1.css",
+    "static/js/main.6c54e75f.js"
   ]
 }
