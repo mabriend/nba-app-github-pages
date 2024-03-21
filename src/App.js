@@ -12,10 +12,10 @@ const App = () => {
 
       <Router>
         <Routes>
-          <Route path='/' element={<HomePage></HomePage>}></Route>
-          <Route path='/teams' element={<Teams></Teams>}></Route>
-          <Route path='/teams/games/:teamId' element={<Games title="Team Games" key={Math.random()}></Games>}></Route>
-          <Route path='/games' element={<Games title="Today Games" key={Math.random()}></Games>}></Route>
+          <Route path='' element={<HomePage></HomePage>}></Route>
+          <Route path='teams' element={<Teams></Teams>}></Route>
+          <Route path='teams/games/:teamId' element={<Games title="Team Games" key={Math.random()}></Games>}></Route>
+          <Route path='games' element={<Games title="Today Games" key={Math.random()}></Games>}></Route>
         </Routes>
       </Router>
 
