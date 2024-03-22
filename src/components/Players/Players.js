@@ -1,12 +1,35 @@
-import React from 'react'
-import { getPlayers } from '../../api/getApi'
+import React, { useEffect } from 'react'
+import { getAllPlayers, getSearchedPlayers } from '../../api/getApi'
 import Menu from '../Menu/Menu';
 import Player from './Player';
 import './Players.css'
+import { useState } from 'react';
 
-const players = await getPlayers();
 
-const Players = () => {
+const Players = (props) => {
+    const [players, setPlayers] = useState([])
+    const [playerName, setPlayerName] = useState('')
+    const [playersDefined, setPlayersDefined] = useState(false)
+
+    useEffect(() => {
+        const getPlayersList = async() => {
+            setPlayers(await getAllPlayers())
+        }
+
+        if(playersDefined === false) {
+            getPlayersList()
+            setPlayersDefined(true)
+        }
+    }, [setPlayersDefined, playersDefined])
+
+    const handleChange = (event) => {
+        const name = event.target.value
+        setPlayerName(name)
+    }
+
+    const handleSearchPlayers = async() => {
+        setPlayers(await getSearchedPlayers(playerName))
+    }
 
   return (
     <div>
@@ -17,11 +40,9 @@ const Players = () => {
         <hr/>
 
         <div className='PlayersForm'>
-        <form>
               <span>Player Name : </span> 
-              <input id="name" type="text" name="name"></input> 
-              <button className='PlayersForm-submit'>Search</button>
-        </form>
+              <input autoComplete='off' id="name" type="text" name="name" value={playerName} onChange={handleChange}></input> 
+              <button onClick={handleSearchPlayers} className='PlayersForm-submit'>Search</button>
         </div>
 
         <div className="allPlayers">

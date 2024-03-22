@@ -63,7 +63,7 @@ const getTeamGames = async (teamId) => {
       }
 }
 
-const getPlayers = async(name) => {
+const getAllPlayers = async() => {
   const options = {
     method: 'GET',
     url: 'https://api.balldontlie.io/v1/players',
@@ -81,4 +81,23 @@ const getPlayers = async(name) => {
   }
 }
 
-export { getTeamsValues, getTodayGames, getTeamGames, getPlayers }
+const getSearchedPlayers = async(name) => {
+  const options = {
+    method: 'GET',
+    url: 'https://api.balldontlie.io/v1/players?search=' + name,
+    params: {page: '0', per_page: '50'},
+    headers: {
+      "Authorization": "93a94e2f-51a3-474f-94d8-2411ca98fb11"
+    }
+  };
+  
+  try {
+    console.log(options)
+      const response = await axios.request(options);
+      return response.data.data;
+  } catch (error) {
+      console.error(error);
+  }
+}
+
+export { getTeamsValues, getTodayGames, getTeamGames, getAllPlayers, getSearchedPlayers }

@@ -1,6 +1,7 @@
 .allPlayers {
     display: grid;
     grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
+    background-color: #e5d5be;
 }
 
 .PlayersForm {
@@ -12,17 +13,20 @@
     border: 2px solid white;
     border-radius: 5px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 1rem;
 }
 
-.PlayersForm > form > span {
+.PlayersForm > span {
     font-size: 1.25rem;
     margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    align-self: center;
 }
 
-.PlayersForm > form > input {
+.PlayersForm > input {
     height: 1.75rem;
+    font-size: 1rem;
 }
 
 .PlayersForm-submit {
@@ -35,6 +39,7 @@
     width: 5rem;
     height: 2rem;
     transition: 0.5s ease;
+    font-size: 1rem;
 }
 
 .PlayersForm-submit:hover {
@@ -52,9 +57,17 @@
 
     .PlayersForm {
         border: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .PlayersForm > span {
+        margin-bottom: 0.5rem;
+        align-self: center;
     }
 
     .PlayersForm-submit {
-        margin-top : 0.5rem
+        margin-top : 0.5rem;
+        align-self: center;
     }
 }
