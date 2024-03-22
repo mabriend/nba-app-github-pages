@@ -24,6 +24,13 @@ const HomePage = () => {
             </div>
         </Link>
 
+        <Link to='/players'>
+            <div className='NavigationItem'>
+                <h2>Players</h2>
+                <p>Click to display NBA players</p>
+            </div>
+        </Link>
+
     </div>
 
   );

@@ -1,0 +1,60 @@
+.allPlayers {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
+}
+
+.PlayersForm {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e5d5be;
+    padding: 0.5rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.PlayersForm > form > span {
+    font-size: 1.25rem;
+    margin-left: 0.5rem;
+}
+
+.PlayersForm > form > input {
+    height: 1.75rem;
+}
+
+.PlayersForm-submit {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    background-color: #2580e3;
+    color: white;
+    border-radius: 2px;
+    border: 2px solid white;
+    width: 5rem;
+    height: 2rem;
+    transition: 0.5s ease;
+}
+
+.PlayersForm-submit:hover {
+    cursor: pointer;
+    scale: 1.10;
+    transition: 0.5s ease;
+}
+
+@media only screen and (max-width: 768px) {
+    .allPlayers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PlayersForm {
+        border: none;
+    }
+
+    .PlayersForm-submit {
+        margin-top : 0.5rem
+    }
+}

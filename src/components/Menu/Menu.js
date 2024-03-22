@@ -22,6 +22,7 @@ const Menu = () => {
                 <Link to='/' className="menu-li"><li>Home</li></Link>
                 <Link to='/teams' className="menu-li"><li>Teams</li></Link>
                 <Link to='/games' className="menu-li"><li>Games</li></Link>
+                <Link to='/players' className="menu-li"><li>Players</li></Link>
             </ul>
         </div>
     )
