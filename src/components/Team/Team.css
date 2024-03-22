@@ -5,6 +5,7 @@
     background-color: #2580e3;
     border: 2px solid white;
     color: white;
+    transition: 1s ease;
 }
 
 .Team img {
@@ -14,4 +15,6 @@
 .Team:hover {
     cursor: pointer;
     background-color: #004fa3;
+    scale: 1.05;
+    transition: 1s ease;
 }
