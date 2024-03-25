@@ -5,7 +5,7 @@ const Player = (props) => {
     const player = props.player
 
   return (
-    <div className='Player'>
+    <div className='Player' onClick={props.handleChange}>
         <span>{ player.first_name + " " + player.last_name }</span>
     </div>
   )

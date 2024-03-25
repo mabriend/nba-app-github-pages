@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 const Games = (props) => {
   const [games, setGames] = useState([])
   const [gamesDefined, setGamesDefined] = useState(false)
+  const [dateGame, setDateGame] = useState(new Date())
 
   const params = useParams()
 
@@ -17,6 +18,7 @@ const Games = (props) => {
       var dd = String(today.getDate()).padStart(2, '0');
       var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
       var yyyy = today.getFullYear();
+      setDateGame(today);
       today = yyyy + '-' + mm + '-' + dd ;
       setGames(await getTodayGames(today))
     }
@@ -25,14 +27,30 @@ const Games = (props) => {
       setGames(await getTeamGames(params.teamId))
     }
 
+    const getNewSelectedGames = async() => {
+      var dd = String(dateGame.getDate()).padStart(2, '0');
+      var mm = String(dateGame.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = dateGame.getFullYear();
+      const date = yyyy + '-' + mm + '-' + dd ;
+      setGames(await getTodayGames(date))
+    }
+
     if(params.teamId === undefined && gamesDefined === false) {
       getGamesScheduled()
       setGamesDefined(true)
     } else if (gamesDefined === false) {
       getGamesFromTeam()
       setGamesDefined(true)
+    } else {
+      getNewSelectedGames()
     }
-  }, [gamesDefined, setGamesDefined, games, params.teamId])
+  }, [gamesDefined, params.teamId, dateGame])
+
+  const setSelectedDateGame = async (selectedDate) => {
+    const newDate = new Date(dateGame); // Créez une nouvelle instance de Date basée sur la valeur actuelle de dateGame
+    newDate.setDate(newDate.getDate() + selectedDate); // Ajoutez ou soustrayez le nombre de jours
+    setDateGame(newDate);
+  }
 
   return (
     <div className='Games'>
@@ -42,6 +60,16 @@ const Games = (props) => {
         <h1 className='PageTitle'>{props.title}</h1>
 
         <hr/>
+
+        <span className='DateNav'> 
+          <img onClick={() => setSelectedDateGame(-1)} className='arrow-left' alt='Arrow left' src="https://cdn.icon-icons.com/icons2/1580/PNG/512/2849833-arrow-arrows-forward-interface-multimedia-navigation-right_107957.png"></img>
+          { String(dateGame.getDate()).padStart(2, '0') } 
+          - 
+          { String(dateGame.getMonth() + 1).padStart(2, '0')}
+          - 
+          {dateGame.getFullYear()}
+          <img onClick={() => setSelectedDateGame(1)} className='arrow-right' alt='Arrow right' src="https://cdn.icon-icons.com/icons2/1580/PNG/512/2849833-arrow-arrows-forward-interface-multimedia-navigation-right_107957.png"></img>
+        </span>
 
         <div className="allGames">
         { games.map(game => {

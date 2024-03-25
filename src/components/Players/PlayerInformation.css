@@ -1,0 +1,56 @@
+.PlayerInformation {
+    background-color: #2580e3;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 40rem;
+    padding: 1rem;
+    border: solid white 2px;
+    color: white;
+    border-radius: 5px;
+    animation: fadeIn 1s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.PlayerInformation > img:first-of-type {
+    width: 2rem;
+    align-self: flex-end;
+}
+
+.PlayerInformation > img:first-of-type:hover {
+    cursor: pointer;
+}
+
+.PlayerName {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.PlayerInformation > hr {
+    margin-bottom: 1rem;
+}
+
+.PlayerDetails {
+    font-size: 1.25rem;
+}
+
+.PlayerInformation > img:last-of-type {
+    width: 10rem;
+    align-self: center;
+}
+
+.animateFade{
+    animation: fadeIn 1s;
+    visibility: visible;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

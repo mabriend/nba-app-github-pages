@@ -19,8 +19,8 @@ const HomePage = () => {
 
         <Link to='/games'>
             <div className='NavigationItem'>
-                <h2>Today Games</h2>
-                <p>Click to display today's schedule</p>
+                <h2>Schedule</h2>
+                <p>Click to display Schedule</p>
             </div>
         </Link>
 

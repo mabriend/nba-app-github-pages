@@ -4,12 +4,15 @@ import Menu from '../Menu/Menu';
 import Player from './Player';
 import './Players.css'
 import { useState } from 'react';
+import PlayerInformation from './PlayerInformation';
 
 
 const Players = (props) => {
     const [players, setPlayers] = useState([])
     const [playerName, setPlayerName] = useState('')
     const [playersDefined, setPlayersDefined] = useState(false)
+    const [displayPlayerInformations, setDisplayPlayerInformations] = useState(false)
+    const [playerSelected, setPlayerSelected] = useState({})
 
     useEffect(() => {
         const getPlayersList = async() => {
@@ -31,6 +34,15 @@ const Players = (props) => {
         setPlayers(await getSearchedPlayers(playerName))
     }
 
+    const handleDisplayPlayerInformation = (player) => {
+        setDisplayPlayerInformations(true)
+        setPlayerSelected(player)
+    }
+
+    const closePlayerInformation = () => {
+        setDisplayPlayerInformations(false)
+    }
+
   return (
     <div>
         <Menu></Menu>
@@ -46,7 +58,8 @@ const Players = (props) => {
         </div>
 
         <div className="allPlayers">
-          { players.map(player => <Player player={player}></Player>) }
+          { players.map(player => <Player player={player} handleChange={() => handleDisplayPlayerInformation(player)}></Player>) }
+          { displayPlayerInformations === true ? <PlayerInformation player={playerSelected} handleChange={() => closePlayerInformation()}></PlayerInformation> : null}
         </div>
     </div>
   )

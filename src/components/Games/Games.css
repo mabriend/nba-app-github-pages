@@ -4,6 +4,25 @@
     justify-content: center;
 }
 
+.DateNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.arrow-left, .arrow-right{
+    width: 2rem;
+}
+
+.arrow-left:hover, .arrow-right:hover{
+    cursor: pointer;
+}
+
+.arrow-left{
+    transform: rotate(180deg);
+}
+
 @media only screen and (max-width: 768px) {
     .allGames{
         display: flex;
