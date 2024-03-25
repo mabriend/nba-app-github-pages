@@ -1,6 +1,6 @@
 .PlayerInformation {
     background-color: #2580e3;
-    position: absolute; 
+    position: fixed; 
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
@@ -52,5 +52,15 @@
     }
     to {
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .PlayerInformation {
+        width: 20rem;
+        position: fixed; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
     }
 }
