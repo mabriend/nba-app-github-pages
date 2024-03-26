@@ -18,7 +18,7 @@ const Teams = () => {
         <hr/>
 
         <div className="allTeams">
-          { teams.map(team => team.id <= 30 ? <Team team={team}></Team> : null) }
+          { teams.map(team => team.id <= 30 ? <Team team={team} id={Math.random()}></Team> : null) }
         </div>
 
       </div>

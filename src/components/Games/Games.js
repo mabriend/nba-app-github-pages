@@ -41,7 +41,7 @@ const Games = (props) => {
     } else if (gamesDefined === false) {
       getGamesFromTeam()
       setGamesDefined(true)
-    } else {
+    } else if (params.teamId === undefined) {
       getNewSelectedGames()
     }
   }, [gamesDefined, params.teamId, dateGame])
@@ -61,7 +61,7 @@ const Games = (props) => {
 
         <hr/>
 
-        <span className='DateNav'> 
+        { params.teamId === undefined ? <span className='DateNav'> 
           <img onClick={() => setSelectedDateGame(-1)} className='arrow-left' alt='Arrow left' src="https://cdn.icon-icons.com/icons2/1580/PNG/512/2849833-arrow-arrows-forward-interface-multimedia-navigation-right_107957.png"></img>
           { String(dateGame.getDate()).padStart(2, '0') } 
           - 
@@ -69,7 +69,7 @@ const Games = (props) => {
           - 
           {dateGame.getFullYear()}
           <img onClick={() => setSelectedDateGame(1)} className='arrow-right' alt='Arrow right' src="https://cdn.icon-icons.com/icons2/1580/PNG/512/2849833-arrow-arrows-forward-interface-multimedia-navigation-right_107957.png"></img>
-        </span>
+        </span> : null}
 
         <div className="allGames">
         { games.map(game => {
